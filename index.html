@@ -15,6 +15,33 @@
 </head>
 <body>
 
+<div id="filters">
+    <label for="nameSearch">Court name</label>
+    <input type="text" id="nameSearch" placeholder="Search by court name">
+
+    <label for="rimFilter">Rim type</label>
+    <select id="rimFilter">
+        <option value="">Any Rim</option>
+        <option value="Single">Single</option>
+        <option value="Double">Double</option>
+        <option value="Single/Double">Single/Double</option>
+    </select>
+
+    <label for="netFilter">Net type</label>
+    <select id="netFilter">
+        <option value="">Any Net</option>
+        <option value="Nylon">Nylon</option>
+        <option value="Chain">Chain</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="inactiveFilter">
+        Show inactive courts
+    </label>
+
+    <button id="applyFilters">Apply</button>
+</div>
+
 <!-- This div is the "container" where the map will appear -->
 <div id="map"></div>
 

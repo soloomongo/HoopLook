@@ -9,3 +9,22 @@ html, body {
     height: 100vh;
     width: 100vw;
 }
+
+#filters {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+#filters input,
+#filters select,
+#filters button {
+    display: block;
+    margin-bottom: 6px;
+    width: 180px;
+}
