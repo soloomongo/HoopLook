@@ -40,7 +40,7 @@ fetch('courts.json')
         courts.forEach(court => {
 
             // Build popup text
-            if (inactive) {
+            if (${court.inactive}) {
                 <strong>${court.name}</strong><br>
                 ${court.description}
             }

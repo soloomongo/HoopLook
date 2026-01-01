@@ -10,7 +10,8 @@
     "hours": "Unknown – 9 PM",
     "quality": 8,
     "popularity": 7,
-    "description": "Well-kept, usually open courts after 6:00pm."
+    "description": "Well-kept, usually open courts after 6:00pm.",
+    "inactive":false
   },
   {
     "name": "Beta Courts at USF",
@@ -23,7 +24,8 @@
     "hours": "9 AM – 9 PM",
     "quality": 2,
     "popularity": 3,
-    "description": "Poor quality rims and unkept. Not recommended."
+    "description": "Poor quality rims and unkept. Not recommended.",
+    "inactive": false
   },
   {
     "name": "Temple Terrace Family Recreation Complex",
@@ -36,7 +38,8 @@
     "hours": "5 AM – 9 PM",
     "quality": 9,
     "popularity": 10,
-    "description": "Costly membership required."
+    "description": "Costly membership required.",
+    "inactive": false
   },
   {
     "name": "USF by Rec",
