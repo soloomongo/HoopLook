@@ -56,6 +56,10 @@ fetch('courts.json')
                     Hours: ${court.hours}<br>
                     Quality: ${court.quality}/10<br>
                     Popularity: ${court.popularity}/10<br>
+                    Rim: ${court.rim}<br>
+                    Net: ${court.net}<br>
+                    Short Hoops: ${court.shortHoop ? "Yes" : "No"}<br>
+                    ${court.accessibility}<br>
                     ${court.description}
                 `;
             }
