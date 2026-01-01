@@ -1,28 +1,28 @@
 [
   {
-    "name": "Downtown Outdoor Courts",
-    "lat": 40.7128,
-    "lng": -74.0060,
-    "indoor": false,
-    "fullCourts": 2,
-    "halfCourts": 0,
-    "lighting": true,
-    "hours": "6 AM – 11 PM",
-    "quality": 4,
-    "popularity": 5,
-    "description": "Very popular outdoor courts with lights and consistent pickup games."
-  },
-  {
-    "name": "Community Center Gym",
-    "lat": 40.7155,
-    "lng": -74.0020,
+    "name": "Jackson Heights NFL YET Center",
+    "lat": 27.978409801474598,
+    "lng": -82.42310569154508,
     "indoor": true,
     "fullCourts": 1,
     "halfCourts": 0,
     "lighting": true,
+    "hours": "Unknown – 9 PM",
+    "quality": 8,
+    "popularity": 7,
+    "description": "Well-kept, usually open courts after 6:00pm."
+  },
+  {
+    "name": "Community Center Gym",
+    "lat": 28.06432,
+    "lng": -82.40942,
+    "indoor": false,
+    "fullCourts": 2,
+    "halfCourts": 0,
+    "lighting": true,
     "hours": "9 AM – 9 PM",
-    "quality": 5,
+    "quality": 2,
     "popularity": 3,
-    "description": "Indoor full court with good rims. Usually quieter than outdoor parks."
+    "description": "Poor quality rims and unkept. Not recommended."
   }
 ]
