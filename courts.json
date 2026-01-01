@@ -13,7 +13,7 @@
     "description": "Well-kept, usually open courts after 6:00pm."
   },
   {
-    "name": "Community Center Gym",
+    "name": "Beta Courts at USF",
     "lat": 28.06432,
     "lng": -82.40942,
     "indoor": false,
@@ -24,5 +24,18 @@
     "quality": 2,
     "popularity": 3,
     "description": "Poor quality rims and unkept. Not recommended."
+  },
+  {
+    "name": "Temple Terrace Family Recreation Complex",
+    "lat": 28.0480087033283,
+    "lng": -82.3754527920173,
+    "indoor": true,
+    "fullCourts": 2,
+    "halfCourts": 0,
+    "lighting": true,
+    "hours": "5 AM – 9 PM",
+    "quality": 9,
+    "popularity": 10,
+    "description": "Costly membership required."
   }
 ]
