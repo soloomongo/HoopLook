@@ -39,15 +39,16 @@ fetch('courts.json')
 
         courts.forEach(court => {
 
+            let popupText;
+
             // Build popup text
             if (court.inactive) {
-                const popupText = `
+                popupText = `
                     <strong>${court.name}</strong><br>
                     ${court.description}
                 `;
-            }
-            else {
-                const popupText = `
+            } else {
+                popupText = `
                     <strong>${court.name}</strong><br>
                     ${court.indoor ? "Indoor" : "Outdoor"}<br>
                     Full Courts: ${court.fullCourts}<br>
