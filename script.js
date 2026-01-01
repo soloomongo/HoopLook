@@ -118,9 +118,9 @@ document.getElementById("applyFilters").addEventListener("click", () => {
 
 function buildDirectionsLinks(court) {
 
-    const google = `https://www.google.com/maps/dir/?api=1&destination=${court.lat},${court.lng}`;
-    const apple = `https://maps.apple.com/?daddr=${court.lat},${court.lng}`;
-    const waze = `https://waze.com/ul?ll=${court.lat},${court.lng}&navigate=yes`;
+    const google = `www.google.com/maps/dir/?api=1&destination=${court.lat},${court.lng}`;
+    const apple = `maps.apple.com/?daddr=${court.lat},${court.lng}`;
+    const waze = `waze.com/ul?ll=${court.lat},${court.lng}&navigate=yes`;
 
     return `
         <strong>Directions:</strong><br>
