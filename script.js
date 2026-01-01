@@ -46,8 +46,8 @@ fetch('courts.json')
                 Full Courts: ${court.fullCourts}<br>
                 Lighting: ${court.lighting ? "Yes" : "No"}<br>
                 Hours: ${court.hours}<br>
-                Quality: ${court.quality}/5<br>
-                Popularity: ${court.popularity}/5<br>
+                Quality: ${court.quality}/10<br>
+                Popularity: ${court.popularity}/10<br>
                 ${court.description}
             `;
 
