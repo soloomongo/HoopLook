@@ -40,16 +40,22 @@ fetch('courts.json')
         courts.forEach(court => {
 
             // Build popup text
-            const popupText = `
+            if (inactive) {
                 <strong>${court.name}</strong><br>
-                ${court.indoor ? "Indoor" : "Outdoor"}<br>
-                Full Courts: ${court.fullCourts}<br>
-                Lighting: ${court.lighting ? "Yes" : "No"}<br>
-                Hours: ${court.hours}<br>
-                Quality: ${court.quality}/10<br>
-                Popularity: ${court.popularity}/10<br>
                 ${court.description}
-            `;
+            }
+            else {
+                const popupText = `
+                    <strong>${court.name}</strong><br>
+                    ${court.indoor ? "Indoor" : "Outdoor"}<br>
+                    Full Courts: ${court.fullCourts}<br>
+                    Lighting: ${court.lighting ? "Yes" : "No"}<br>
+                    Hours: ${court.hours}<br>
+                    Quality: ${court.quality}/10<br>
+                    Popularity: ${court.popularity}/10<br>
+                    ${court.description}
+                `;
+            }
 
             // Add marker to the map
             L.marker([court.lat, court.lng])

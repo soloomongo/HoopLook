@@ -37,5 +37,19 @@
     "quality": 9,
     "popularity": 10,
     "description": "Costly membership required."
+  },
+  {
+    "name": "USF by Rec",
+    "lat": 28.061584268099,
+    "lng": -82.4066215424209,
+    "indoor": false,
+    "fullCourts": 0,
+    "halfCourts": 0,
+    "lighting": false,
+    "hours": "N/A",
+    "quality": 0,
+    "popularity": 0,
+    "description": "No longer basketball courts; torn down and turned into pickleball courts.",
+    "inactive": true
   }
 ]
