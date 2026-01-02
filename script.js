@@ -38,8 +38,8 @@ if (navigator.geolocation) {
 fetch('courts.json')
     .then(response => response.json())
     .then(courts => {
-        allCourts = courts;
-        renderCourts(allCourts);
+        allCourts = courts;     // store all courts locally
+        renderCourts(allCourts);    // initially render all markers
     })
     .catch(error => {
         console.error("Error loading courts:", error);
@@ -52,10 +52,6 @@ function renderCourts(courts) {
     markers = [];
 
     courts.forEach(court => {
-
-        if (court.inactive && !document.getElementById("inactiveFilter").checked) {
-            return;
-        }
 
         let popupText;
 
@@ -91,32 +87,6 @@ function renderCourts(courts) {
     });
 }
 
-document.getElementById("applyFilters").addEventListener("click", () => {
-
-    const nameSearch = document.getElementById("nameSearch").value.toLowerCase();
-    const rimFilter = document.getElementById("rimFilter").value;
-    const netFilter = document.getElementById("netFilter").value;
-
-    const filtered = allCourts.filter(court => {
-
-        if (nameSearch && !court.name.toLowerCase().includes(nameSearch)) {
-            return false;
-        }
-
-        if (rimFilter && court.rim !== rimFilter) {
-            return false;
-        }
-
-        if (netFilter && court.net !== netFilter) {
-            return false;
-        }
-
-        return true;
-    });
-
-    renderCourts(filtered);
-});
-
 function buildDirectionsLinks(court) {
 
     const google = `https://www.google.com/maps/dir/?api=1&destination=${court.lat},${court.lng}`;
@@ -131,3 +101,60 @@ function buildDirectionsLinks(court) {
     `;
 }
 
+// Get filter panel and button elements
+const filterBtn = document.getElementById('filterBtn');
+const filterPanel = document.getElementById('filterPanel');
+
+// Toggle panel open/close when filter button clicked
+filterBtn.addEventListener('click', () => {
+    filterPanel.classList.toggle('open'); // class controls slide animation
+});
+
+// Live Filtering
+function applyFilters() {
+    const nameSearch = document.getElementById("nameSearch").value.toLowerCase();
+    const rimFilter = document.getElementById("rimFilter").value;
+    const netFilter = document.getElementById("netFilter").value;
+    const activeFilter = document.getElementById("activeFilter").value;
+
+    // Filter courts array based on user selections
+    const filtered = allCourts.filter(court => {
+
+        // Name search
+        if (nameSearch && !court.name.toLowerCase().includes(nameSearch)) {
+            return false;
+        }
+
+        // Rim type filter
+        if (rimFilter && court.rim !== rimFilter) {
+            return false;
+        }
+
+        // Net type filter
+        if (netFilter && court.net !== netFilter) {
+            return false;
+        }
+
+        // Active/inactive filter
+        if (activeFilter) {
+            const isActive = !court.inactive;
+            if ((activeFilter === "true" && !isActive) || (activeFilter === "false" && isActive)) {
+                return false;
+            }
+        }
+
+        return true; // include court
+    });
+
+    // Render the filtered courts
+    renderCourts(filtered);
+}
+
+// Event listeners for live filtering
+// Live search: updates as user types
+document.getElementById("nameSearch").addEventListener("input", applyFilters);
+
+// Dropdown filters: update as user changes selection
+document.querySelectorAll("#filterPanel select").forEach(select => {
+    select.addEventListener("change", applyFilters);
+});

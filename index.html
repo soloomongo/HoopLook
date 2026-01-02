@@ -15,33 +15,35 @@
 </head>
 <body>
 
-<div id="searchButton">
+<div id="searchBar">
     <input type="text" id="nameSearch" placeholder="Search courts...">
+    <button id="filterBtn">☰</button>
 </div>
 
-<div id="filters">
+<div id="filterPanel">
 
-    <label for="rimFilter">Rim type</label>
-    <select id="rimFilter">
-        <option value="">Any Rim</option>
-        <option value="Single">Single</option>
-        <option value="Double">Double</option>
-        <option value="Single/Double">Single/Double</option>
-    </select>
-
-    <label for="netFilter">Net type</label>
-    <select id="netFilter">
-        <option value="">Any Net</option>
-        <option value="Nylon">Nylon</option>
-        <option value="Chain">Chain</option>
-    </select>
-
-    <label>
-        <input type="checkbox" id="inactiveFilter">
-        Show inactive courts
+    <label>Rim type:
+        <select id="rimFilter">
+            <option>Any</option>
+            <option>Single</option>
+            <option>Double</option>
+            <option>Single/Double</option>
+        </select>
     </label>
-
-    <button id="applyFilters">Apply</button>
+    <label>Net type:
+        <select id="netFilter">
+            <option>Any</option>
+            <option>Nylon</option>
+            <option>Chain</option>
+        </select>
+    </label>
+    <label>Active:
+        <select id="activeFilter">
+            <option>Show All</option>
+            <option>Active</option>
+            <option>Inactive</option>
+        </select>
+    </label>
 </div>
 
 <!-- This div is the "container" where the map will appear -->
