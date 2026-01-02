@@ -16,6 +16,8 @@ html, body {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
+    width: min(60vw, 22rem);
+    max-height: 15vh;
     z-radius: 1000;
     border-radius: 999px;
     font-family: 'Merriweather', sans-serif;
