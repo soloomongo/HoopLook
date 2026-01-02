@@ -16,9 +16,9 @@ html, body {
     opacity: 0.5;
     box-sizing: border-box;
     top: 10px;
-    left: 25px;
-    width: min(80vw, 22rem);
-    max-height: 20vh;
+    left: 50px;
+    width: min(90vw, 22rem);
+    max-height: 10vh;
     z-index: 1000;
     border-radius: 999px;
     padding: 1rem;
