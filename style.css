@@ -17,8 +17,7 @@ html, body {
     box-sizing: border-box;
     top: 10px;
     left: 50px;
-    width: min(90vw, 22rem);
-    max-height: 10vh;
+    width: min(90vw);
     z-index: 1000;
     border-radius: 999px;
     padding: 1rem;
@@ -36,7 +35,6 @@ html, body {
     font-family: 'Merriweather', sans-serif;
 }
 
-#searchButton input,
 #filters input,
 #filters select,
 #filters button {
