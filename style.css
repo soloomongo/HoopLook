@@ -10,6 +10,17 @@ html, body {
     width: 100vw;
 }
 
+#searchButton {
+    position: absolute;
+    box-sizing: border-box;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-radius: 1000;
+    border-radius: 999px;
+    font-family: 'Merriweather', sans-serif;
+}
+
 #filters {
     position: absolute;
     top: 10px;
@@ -18,9 +29,10 @@ html, body {
     padding: 10px;
     z-index: 1000;
     border-radius: 6px;
-    font-family: Arial, sans-serif;
+    font-family: 'Merriweather', sans-serif;
 }
 
+#searchButton input,
 #filters input,
 #filters select,
 #filters button {
