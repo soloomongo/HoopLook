@@ -12,14 +12,16 @@ html, body {
 
 #searchButton {
     position: absolute;
+    background: #595F72;
     box-sizing: border-box;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     width: min(60vw, 22rem);
-    max-height: 15vh;
-    z-radius: 1000;
+    max-height: 30vh;
+    z-index: 1000;
     border-radius: 999px;
+    padding: 1rem;
     font-family: 'Merriweather', sans-serif;
 }
 
