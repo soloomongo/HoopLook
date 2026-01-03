@@ -15,7 +15,6 @@ html, body {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    /* testing push to branch*/
 
     width: min(95vw, 900px);
     height: 56px;
@@ -24,38 +23,63 @@ html, body {
     align-items: center;
     gap: 0.5rem;
 
+    border: 2px solid transparent;      /* new addition */
     background: white;
     border-radius: 999px;
-    padding: 0 1rem;
+    padding: 0.1rem;
 
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     z-index: 1000;
+    transition: border 0.2s, background 0.2s; /*new addidition */
 }
 
-#searchBar input {
-    flex: 1;                 /* fills available space */
+/* new block; replaces input:focus */
+#searchBar:focus-within {
+    border-color: #595F72;
+    background-color: white;
+}
+
+/* new block; replaces input */
+#nameSearch {
+    flex: 1;                     /* Take all remaining space */
+    border: none;                /* Remove input default border */
+    outline: none;               /* Remove default focus glow */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 999px;        /* Keep pill rounded inside container */
+    background: transparent;     /* Transparent so container shows bg */
+}
+
+/* #searchBar input {
+    flex: 1;                 /* fills available space //
     height: 100%;
     border: none;
     outline: none;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
     font-family: 'Merriweather', sans-serif;
+    border-radius: 999px;
     background: transparent;
 
-    /* Smooth transition for glow */
+    /* Smooth transition for glow //
     transition: box-shadow 0.3s ease;
 }
 
-/* Focus state */
+/* Focus state //
 #searchBar input:focus {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
+Testing change; this is previous code before test update */
 
 #filterBtn {
-    background: none;
+    background-color: #595F72; /* from white to new */
+    color: white; /* new addition */
     border: none;
     cursor: pointer;
-    font-size: 1.1rem;
-    padding: 0.5rem;
+   /* font-size: 1.1rem; */
+    padding: 0.5rem 1rem; /*added 1rem */
+    border-radius: 999px;
+    margin-left: 0.5rem; /*new addition; space between input & button*/
 }
 
 #filterPanel {
