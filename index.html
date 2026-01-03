@@ -16,7 +16,7 @@
 <body>
 
 <div id="searchBar">
-    <input type="text" id="nameSearch" placeholder="Search courts...">
+    <input type="text" id="nameSearch" placeholder="Search courts..."/>
     <button id="filterBtn">☰</button>
 </div>
 
@@ -24,7 +24,7 @@
 
     <label>Rim type:
         <select id="rimFilter">
-            <option>Any</option>
+            <option value="">Any</option>
             <option>Single</option>
             <option>Double</option>
             <option>Single/Double</option>
@@ -32,16 +32,17 @@
     </label>
     <label>Net type:
         <select id="netFilter">
-            <option>Any</option>
+            <option value="">Any</option>
             <option>Nylon</option>
             <option>Chain</option>
+            <option>No Net</option>
         </select>
     </label>
     <label>Active:
         <select id="activeFilter">
-            <option>Show All</option>
-            <option>Active</option>
-            <option>Inactive</option>
+            <option value="">Show All</option>
+            <option value="true">Active</option>
+            <option value="false">Inactive</option>
         </select>
     </label>
 </div>

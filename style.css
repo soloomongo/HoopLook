@@ -47,7 +47,7 @@ html, body {
 
 /* Focus state */
 #searchBar input:focus {
-    box-shadow: 0 0 8px rgba(88, 120, 255, 0.6);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 #filterBtn {
