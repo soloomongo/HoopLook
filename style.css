@@ -13,8 +13,9 @@ html, body {
 #searchBar {
     position: absolute;
     top: 10px;
-    left: 50px;
+    left: 50%;
     transform: translateX(-50%);
+
 
     width: min(95vw, 900px);
     height: 56px;
