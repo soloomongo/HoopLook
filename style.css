@@ -33,12 +33,12 @@ html, body {
     transition: box-shadow 0.3 ease; /*new addidition */
 }
 
-/* new block; replaces input:focus */
+/* new block; replaces input:focus //
 #searchBar:focus-within {
     box-shadow: rgba(0,0,0,0.6);
     background-color: white;
 }
-
+*/
 /* new block; replaces input */
 #nameSearch {
     flex: 1;                     /* Take all remaining space */
